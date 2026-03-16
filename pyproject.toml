@@ -1,0 +1,8 @@
+[project]
+name = "black-scholes-methods"
+version = "0.1.0"
+description = "Comparison of numerical methods for Black-Scholes option pricing"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["."]
