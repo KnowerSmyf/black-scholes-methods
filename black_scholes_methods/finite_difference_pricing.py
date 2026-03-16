@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-
 import numpy as np
+import warnings 
 
 
 @dataclass(frozen=True)
@@ -39,6 +39,15 @@ def explicit_fd_european_option(
 
     dS = S_max / M
     dt = T / N
+
+    stability_indicator = dt * (sigma * sigma * M * M + r)
+    if stability_indicator > 1.0:
+        warnings.warn(
+            "Explicit finite-difference scheme may be unstable for this grid. "
+            f"Stability indicator = {stability_indicator:.4f}. "
+            "Consider increasing N or reducing M.",
+            RuntimeWarning,
+        )
 
     S_grid = np.linspace(0.0, S_max, M + 1)
     t_grid = np.linspace(0.0, T, N + 1)
