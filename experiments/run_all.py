@@ -13,7 +13,6 @@ def main():
     sigma = 0.2
 
     analytic = black_scholes_price(S0, K, T, r, sigma)
-
     mc = monte_carlo_european_option(S0, K, T, r, sigma, 100_000)
     fd = explicit_fd_european_option(
         S0, K, T, r, sigma, S_max=400, M=400, N=20000, option_type="call"
