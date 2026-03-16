@@ -13,7 +13,7 @@ A small quantitative finance project comparing multiple approaches to pricing Eu
 
 Under the risk-neutral measure, the stock price follows:
 
-dS_t = r S_t dt + sigma S_t dW_t
+$$dS_t = r S_t dt + \sigma S_t dW_t$$
 
 This implies the discounted stock price is a martingale, and European derivative prices can be written as discounted conditional expectations of their terminal payoff.
 
