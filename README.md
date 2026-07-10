@@ -17,7 +17,7 @@ The goal is to illustrate how different mathematical formulations of the same pr
 Under the risk-neutral measure, the stock price follows **geometric Brownian motion**:
 
 $$
-dS_t = r S_t \, dt + \sigma S_t \, dW_t
+dS_t = r S_t dt + \sigma S_t dW_t
 $$
 
 where
